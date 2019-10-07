@@ -7,6 +7,7 @@ module.exports = {
 	themeConfig: {
 		// repo: 'https://wwww.github.com',
 		repoLabel: 'Repo',
+		base: '/vuepress/',
 		editLinks: false,
 		displayAllHeaders: true,
 		smoothScroll: true,
@@ -52,21 +53,6 @@ module.exports = {
 		  }
 	},
 	plugins: [
-		[
-			'@vuepress/google-analytics',
-			{
-				ga: '' // UA-00000000-0
-			}
-		],
-		[
-			'vuepress-plugin-rss',
-			{
-				base_url: '/',
-				site_url: 'https://vuepressblog.org',
-				filter: frontmatter => frontmatter.date <= new Date(currentDateUTC),
-				count: 20
-			}
-		],
 		[
 			'@vuepress/last-updated',
 			{
