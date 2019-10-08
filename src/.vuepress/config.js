@@ -3,9 +3,8 @@ const moment = require('moment');
 module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',
-	base: '/vuepress/',
 	themeConfig: {
-		activeHeaderLinks: true,
+		base: '/vuepress/',
 		nav: [
 			{ text: '首页', link: '/' }, 
 			{ text: 'Blog', link: '/blog/' },
