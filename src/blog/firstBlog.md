@@ -6,4 +6,8 @@ tags:
     - JavaScript
 ---
 
-这是我测试的第一个博客
+这是我测试的第一个博客 
+
+ {{ 10 + 10 }} 
+
+<span v-for="i in 3">{{ i }} </span> 

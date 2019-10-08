@@ -1,18 +1,10 @@
-const currentDateUTC = new Date().toUTCString()
 const moment = require('moment');
 
 module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',
+	base: '/vuepress/',
 	themeConfig: {
-		// repo: 'https://wwww.github.com',
-		repoLabel: 'Repo',
-		base: '/vuepress/',
-		editLinks: false,
-		displayAllHeaders: true,
-		smoothScroll: true,
-		lastUpdated: false, // string | boolean
-		editLinkText: 'Found a bug? Help me improve this page!',
 		activeHeaderLinks: true,
 		nav: [
 			{ text: '首页', link: '/' }, 
@@ -25,7 +17,6 @@ module.exports = {
 		docsDir: 'src',
 		pageSize: 5,
 		startPage: 0,
-		sidebar: 'auto',
 		sidebar: {
 			'/blog/': [
 			  '',     
@@ -57,15 +48,14 @@ module.exports = {
 			'@vuepress/last-updated',
 			{
 			  transformer: (timestamp, lang) => {
-				// 不要忘了安装 moment
 				const moment = require('moment')
 				moment.locale(lang)
 				return moment(timestamp).fromNow()
 			  }
 			}
 		  ],
-		'vuepress-plugin-reading-time',
-		'vuepress-plugin-janitor'
+		['@vuepress/back-to-top'],
+		'vuepress-plugin-reading-time'
 	],
 	head: [
 		['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon.png' }],
