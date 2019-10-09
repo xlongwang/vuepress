@@ -17,12 +17,6 @@ module.exports = {
 		pageSize: 5,
 		startPage: 0,
 		sidebar: {
-			'/blog/': [
-			  '',     
-			  'firstBlog',
-			  'info',
-			],
-
 			'/standard/': [
 				''
 			  ],
@@ -43,6 +37,12 @@ module.exports = {
 		  }
 	},
 	plugins: [
+		[
+			'@vuepress/google-analytics',
+			{
+			  'ga': '' // UA-00000000-0
+			}
+		],
 		[
 			'@vuepress/last-updated',
 			{

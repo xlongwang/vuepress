@@ -11,11 +11,6 @@ export default {
     computed: {
         formatPublishDate() {
             const dateFormat = new Date(this.item.frontmatter.date)
-            const options = {
-                year: 'numeric',
-                month: 'long',
-                day: 'numeric'
-            } 
              return moment(dateFormat).format('YYYY-MM-DD')
         }
     }

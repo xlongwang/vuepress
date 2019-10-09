@@ -101,10 +101,9 @@ export default {
             </button>
         </div>
         <ul class="blog-list">
-            <li v-for="(item, index) in filteredList"
+            <li v-show="index >= currentPage * pageSize && index < (currentPage + 1) * pageSize" v-for="(item, index) in filteredList"
                 class="blog-list__item">
                 <BlogPostPreview 
-                    v-show="index >= currentPage * pageSize && index < (currentPage + 1) * pageSize"
                     :item="item"
                 />
                 <ul class="blog-list__tags">
