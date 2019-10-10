@@ -1,3 +1,52 @@
+<template>
+	<div>  
+        <div 
+            v-if="selectedTags.length > 0"
+            class="filtered-heading"
+        >
+            <h2 class="filter_tag_box">
+                Filtered by {{ selectedTags.join(',') }}
+            </h2>
+            <button
+                type="button"
+                @click="resetTags"
+                class="btn clear-filter-btn"
+            >
+                Clear filter
+            </button>
+        </div>
+        <ul class="blog-list">
+            <li v-show="index >= currentPage * pageSize && index < (currentPage + 1) * pageSize" v-for="(item, index) in filteredList"
+                class="blog-list__item">
+                <BlogPostPreview 
+                    :item="item"
+                />
+                <ul class="blog-list__tags">
+                    <li v-for="tag in item.frontmatter.tags">
+                        <button @click="addTag(tag)">{{ tag }}</button>
+                    </li>
+                </ul>
+            </li>
+        </ul>
+
+        <div class="pagination">
+            <button v-show="currentPage > 0" 
+                @click="previousPage"
+                class="button--pagination"
+                type="button" 
+            >
+               上一页   
+            </button>
+            <button v-show="currentPage < totalPages - 1"
+                @click="nextPage"
+                class="button--pagination"
+                type="button"
+            >
+                下一页
+            </button>
+        </div>
+    </div>
+</template>
 <script>
 export default {
     name: 'BlogPostList',
@@ -82,56 +131,6 @@ export default {
     }
 }
 </script>
-
-<template>
-	<div>  
-        <div 
-            v-if="selectedTags.length > 0"
-            class="filtered-heading"
-        >
-            <h2 class="filter_tag_box">
-                Filtered by {{ selectedTags.join(',') }}
-            </h2>
-            <button
-                type="button"
-                @click="resetTags"
-                class="btn clear-filter-btn"
-            >
-                Clear filter
-            </button>
-        </div>
-        <ul class="blog-list">
-            <li v-show="index >= currentPage * pageSize && index < (currentPage + 1) * pageSize" v-for="(item, index) in filteredList"
-                class="blog-list__item">
-                <BlogPostPreview 
-                    :item="item"
-                />
-                <ul class="blog-list__tags">
-                    <li v-for="tag in item.frontmatter.tags">
-                        <button @click="addTag(tag)">{{ tag }}</button>
-                    </li>
-                </ul>
-            </li>
-        </ul>
-
-        <div class="pagination">
-            <button v-show="currentPage > 0" 
-                @click="previousPage"
-                class="button--pagination"
-                type="button" 
-            >
-               上一页   
-            </button>
-            <button v-show="currentPage < totalPages - 1"
-                @click="nextPage"
-                class="button--pagination"
-                type="button"
-            >
-                下一页
-            </button>
-        </div>
-    </div>
-</template>
 
 <style scoped>
 .blog-list {

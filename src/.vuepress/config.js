@@ -3,12 +3,15 @@ const moment = require('moment');
 module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',
+	home: true,
 	themeConfig: {
 		base: '/vuepress/',
+		lastUpdated: 'Last Updated',
 		nav: [
 			{ text: '首页', link: '/' }, 
 			{ text: 'Blog', link: '/blog/' },
 			{ text: '技术分享', link: '/share/' },
+			{ text: '组件文档', link: '/baseComponents/' },
 			{ text: '常见问题', link: '/qa/' },
 			{ text: '历史更新', link: '/archive/' }
 		], 
@@ -16,6 +19,7 @@ module.exports = {
 		docsDir: 'src',
 		pageSize: 8,
 		startPage: 0,
+		sidebar: 'auto',
 		sidebar: {
 			'/standard/': [
 				''
@@ -23,6 +27,9 @@ module.exports = {
 
 			'/qa/': [
 				''
+			],
+			'/baseComponents/': [
+				'',
 			],
 			'/share/': [
 				''
@@ -35,6 +42,7 @@ module.exports = {
 			]
 			
 		  }
+		
 	},
 	plugins: [
 		[

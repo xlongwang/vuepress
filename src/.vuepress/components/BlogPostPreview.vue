@@ -1,3 +1,12 @@
+<template>
+	<section class="blog-list__box">
+		<router-link :to="item.path" class="blog-list__item">
+			<h3 class="blog-post__title">{{ item.frontmatter.title }}</h3>
+			<time class="blog_time">{{ formatPublishDate }}</time>
+		</router-link>
+    </section>
+</template>
+
 <script>
 import moment from 'moment'
 export default {
@@ -16,15 +25,6 @@ export default {
     }
 }
 </script>
-
-<template>
-	<section class="blog-list__box">
-		<router-link :to="item.path" class="blog-list__item">
-			<h3 class="blog-post__title">{{ item.frontmatter.title }}</h3>
-			<time class="blog_time">{{ formatPublishDate }}</time>
-		</router-link>
-    </section>
-</template>
 
 <style scoped>
 .blog-post__button {
