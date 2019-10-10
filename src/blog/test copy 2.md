@@ -3,7 +3,7 @@ title: 测试博客
 date: 2019-09-23 20:47:18
 blog: true
 tags:
-    - JavaScript
+    - CSS
 ---
 
 这是我测试的第一个博客 
