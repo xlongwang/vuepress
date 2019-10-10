@@ -1,9 +1,9 @@
 ---
-title: 我的第一博客
+title: 测试博客
 date: 2019-09-23 20:47:18
 blog: true
 tags:
-    - JavaScript
+    - CSS
 ---
 
 这是我测试的第一个博客 
@@ -24,11 +24,3 @@ tags:
 [bar - four](../bar/four.html) <!-- 也可以用 .html -->
 
 提供了对 YAML front matter 开箱即用
-
-
-``` js
-export default {
-  name: 'MyComponent',
-  // ...
-}
-```

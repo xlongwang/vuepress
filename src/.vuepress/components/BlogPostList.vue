@@ -120,14 +120,14 @@ export default {
                 class="button--pagination"
                 type="button" 
             >
-                Previous
+               上一页   
             </button>
             <button v-show="currentPage < totalPages - 1"
                 @click="nextPage"
                 class="button--pagination"
                 type="button"
             >
-                Next
+                下一页
             </button>
         </div>
     </div>
@@ -155,7 +155,7 @@ export default {
 }
 
 .button--pagination {
-	background-color: #32c8cf;
+	background-color: #303131;
 	border-radius: 4px;
 	color: #fff;
 	font-size: 0.8rem;
@@ -168,9 +168,9 @@ export default {
 
 .button--pagination:hover {
     background-color: #fff;
-    border: 1px solid #32c8cf;
+    border: 1px solid #303131;
     border-radius: 4px;
-    color: #32c8cf;
+    color: #303131;
 }
 
 .clear-filter-btn {

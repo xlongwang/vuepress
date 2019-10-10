@@ -14,7 +14,7 @@ module.exports = {
 		], 
 		logo: '/logo.png',
 		docsDir: 'src',
-		pageSize: 5,
+		pageSize: 8,
 		startPage: 0,
 		sidebar: {
 			'/standard/': [
