@@ -7,6 +7,11 @@ module.exports = {
 	themeConfig: {
 		base: '/vuepress/',
 		lastUpdated: 'Last Updated',
+		repo: 'xlongwang/vuepress',
+		repoLabel: '贡献代码！',
+		editLinks: true,
+		// 自定义编辑链接的文本。默认是 "Edit this page"
+		editLinkText: '编辑此页',
 		nav: [
 			{ text: '首页', link: '/' }, 
 			{ text: 'Blog', link: '/blog/' },

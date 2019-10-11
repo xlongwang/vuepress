@@ -38,7 +38,7 @@
 			</div>
 	  </div>
 	<div class="meta" :style='{height: codeHeight}'>
-			<div class="code--segment" v-show="taggle"> 
+			<div class="code--segment"> 
 		<pre><code class="html hljs xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">el-row</span>&gt;</span>
 	<span class="hljs-tag">&lt;<span class="hljs-name">el-button</span>&gt;</span>默认按钮<span class="hljs-tag">&lt;/<span class="hljs-name">el-button</span>&gt;</span>
@@ -61,8 +61,8 @@
 <div class="demo-block-control" @click="doTaggle" @mouseenter="moveIn" @mouseleave="moveOut">
 <i class="el-icon-caret-bottom" :class="{hovering: isHover}"></i>
 <transition name="my">
-		<span class="demo-block-txt" v-show="isHover">显示代码</span>
-		<span class="demo-block-txt" v-show="!isHover">隐藏代码</span>
+		<span class="demo-block-txt" v-if="!taggle" v-show="isHover">显示代码</span>
+          <span class="demo-block-txt" v-else v-show="isHover">隐藏代码</span>
 </transition>
 
       

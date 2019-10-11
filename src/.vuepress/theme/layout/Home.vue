@@ -113,19 +113,19 @@ export default {
           ]
         },
         {
-          title: 'Blog',
+          title: '组件文档',
           rows: [
               {
-                name: 'JavaScript',
-                href: '/blog/'
+                name: '基础组件',
+                href: '/baseComponents/'
               },
                {
-                name: 'Css',
-                href: '/blog/'
+                name: '按钮',
+                href: '/baseComponents/#按钮'
               },
              {
-              name: '小程序',
-              href: '/blog/'
+              name: '文字链接',
+              href: '/baseComponents/#文字链接/'
             },
           ]
         },
