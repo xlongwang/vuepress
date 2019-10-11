@@ -1,43 +1,43 @@
 <template>
   <div>
-    <div class="code">
-      <div class="code--title">
+	  <div class="code--title">
         <small>基本按钮用法</small>
       </div>
-      <div class="code--demo">
-        <div class="code-content">
-          <div class="demo-button">
-            <div class="el-row">
-              <button type="button" class="el-button el-button--default">
-                <!---->
-                <!---->
-                <span>默认按钮</span>
-              </button>
-              <button type="button" class="el-button el-button--primary">
-                <!---->
-                <!---->
-                <span>主要按钮</span>
-              </button>
-              <button type="button" class="el-button el-button--success">
-                <!---->
-                <!---->
-                <span>成功按钮</span>
-              </button>
-              <button type="button" class="el-button el-button--warning">
-                <!---->
-                <!---->
-                <span>警告按钮</span>
-              </button>
-              <button type="button" class="el-button el-button--danger">
-                <!---->
-                <!---->
-                <span>危险按钮</span>
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-	<div class="meta">
+    <div class="demo-block demo-zh-CN demo-button">
+		<div class="source">
+			<div class="code--demo">
+				<div class="code-content">
+					<div class="el-row">
+					<button type="button" class="el-button el-button--default">
+						<!---->
+						<!---->
+						<span>默认按钮</span>
+					</button>
+					<button type="button" class="el-button el-button--primary">
+						<!---->
+						<!---->
+						<span>主要按钮</span>
+					</button>
+					<button type="button" class="el-button el-button--success">
+						<!---->
+						<!---->
+						<span>成功按钮</span>
+					</button>
+					<button type="button" class="el-button el-button--warning">
+						<!---->
+						<!---->
+						<span>警告按钮</span>
+					</button>
+					<button type="button" class="el-button el-button--danger">
+						<!---->
+						<!---->
+						<span>危险按钮</span>
+					</button>
+					</div>
+				</div>
+			</div>
+	  </div>
+	<div class="meta" :style='{height: codeHeight}'>
 			<div class="code--segment" v-show="taggle"> 
 		<pre><code class="html hljs xml">
 <span class="hljs-tag">&lt;<span class="hljs-name">el-row</span>&gt;</span>
@@ -62,9 +62,11 @@
 <i class="el-icon-caret-bottom" :class="{hovering: isHover}"></i>
 <transition name="my">
 		<span class="demo-block-txt" v-show="isHover">显示代码</span>
+		<span class="demo-block-txt" v-show="!isHover">隐藏代码</span>
 </transition>
 
-      </div>
+      
+	  </div>
     </div>
   </div>
 </template>
@@ -79,7 +81,7 @@ export default {
 	  msg: "button",
 	  isHover: false,
 	  taggle: false,
-	  height: 600
+	  codeHeight: 0
 	}
   },
    methods: {
@@ -91,11 +93,16 @@ export default {
 	  },
 	  doTaggle(){
 		  this.taggle = !this.taggle
+		  if(this.taggle){
+			  this.codeHeight = "374px"
+		  }else{
+               this.codeHeight = "0px"
+		  }
 	  }
    }
 };
 </script>
 <style lang="stylus">
-   
+     
 	
 </style>

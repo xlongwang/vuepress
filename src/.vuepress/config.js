@@ -10,7 +10,6 @@ module.exports = {
 		nav: [
 			{ text: '首页', link: '/' }, 
 			{ text: 'Blog', link: '/blog/' },
-			{ text: '技术分享', link: '/share/' },
 			{ text: '组件文档', link: '/baseComponents/' },
 			{ text: '常见问题', link: '/qa/' },
 			{ text: '历史更新', link: '/archive/' }
@@ -30,9 +29,6 @@ module.exports = {
 			],
 			'/baseComponents/': [
 				'',
-			],
-			'/share/': [
-				''
 			],
 			'/dev/': [
 				''

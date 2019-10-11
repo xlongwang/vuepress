@@ -30,7 +30,7 @@
     border-top: 1px solid #eaeefb;
     overflow: hidden;
     height: 0;
-    /* transition:height .2s */
+    transition:height .2s
 }
 
 .demo-block .description {
@@ -108,7 +108,8 @@
     position: relative;
 }
 .demo-block-control:hover{
-	color #409eff
+	color #409eff;
+	background-color #f9fafc;
 }
 .demo-block-txt{
     position: absolute;
@@ -138,18 +139,16 @@
     transition all .3s
 .my-leave-active
     transition all .3s
- 
-.meta {
-    background-color: #fafafa;
-    border-top: 1px solid #eaeefb;
-    transition: height .2s;
-}
-.hljs{
 
+.demo-block .hljs{
     padding: 18px 24px;
-
 }
 pre{
 	margin: 0;
-	padding: 20px;
+}
+.code--title{
+	font-size: 16px;
+    color: #5e6d82;
+    line-height: 1.5em;
+	padding 0 0 10px 0;
 }
