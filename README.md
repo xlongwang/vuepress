@@ -27,5 +27,5 @@ npm run dev  or yarn
 npm run build or yarn dev
 ```
 
- 输入localhost：[http://localhost:8080](http://localhost:8080)!
+[http://localhost:8080](http://localhost:8080)!
 
