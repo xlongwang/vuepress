@@ -1,31 +1,7 @@
-# VuePress Blog 
-
-
-
-## Getting Started
-
-### Prerequisites
-
-- [NodeJS >= 8](https://nodejs.org/)
-- [yarn](https://yarnpkg.com/lang/en/docs/install/) (Recommended)
-- Basic knowledge of navigating the terminal
-
-### Installation
-
-
-```bash
-# Clone the repo for local development
-git clone https://github.com/xlongwang/vuepress.git
-
-# Change directory into project
-cd vuepress
-
-# Install dependencies
-npm run dev  or yarn
-
-# Run local server
-npm run build or yarn dev
-```
-
-[http://localhost:8080](http://localhost:8080)!
-
+---
+title: Home
+home: true
+heroText: 前端开发文档
+tagline: 小程序、Web和移动端H5开发方案
+footer: Copyright © 2019  All Rights Reserved.
+---
