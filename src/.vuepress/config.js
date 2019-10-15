@@ -5,13 +5,12 @@ module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',         //发布目录
 	themeConfig: {
-		base: '/vuepress/',
-		lastUpdated: '更新于',
-		repo: 'xlongwang/vuepress',
-		repoLabel: '贡献代码！',
+		lastUpdated: '更新于',  
+		repo: 'xlongwang/vuepress',   //上报的地址
+		repoLabel: '贡献代码！',   
 		editLinks: true,
 		editLinkText: '在github上编辑此页',
-		navbar: true,
+		navbar: true,  //
 		// logo: '/logo.png',
 		nav: [
 			{ text: '首页', link: '/' },
