@@ -3,14 +3,13 @@ const sidebar = require('./config/sidebar.js')
 
 module.exports = {
 	title: 'Frontend Blog',
-	dest: './public',
+	dest: './public',         //发布目录
 	themeConfig: {
-		base: '/vuepress/',
 		lastUpdated: '更新于',
 		repo: 'xlongwang/vuepress',
 		repoLabel: '贡献代码！',
 		editLinks: true,
-		editLinkText: '在github上编辑此页',
+		editLinkText: '在github上编辑此页',    
 		navbar: true,
 		nav: [
 			{ text: '首页', link: '/' },
@@ -30,11 +29,10 @@ module.exports = {
 		startPage: 0,
 		sidebarDepth: 0,
 		sidebar: {
-			"/baseComponents/": sidebar,
+			"/baseComponents/": sidebar,     //设置侧边栏
 		}
 	},
 	plugins: require('./plugins/'),
-
 	head: [
 		['link', { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' }]
 	]

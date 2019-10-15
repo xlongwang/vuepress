@@ -150,7 +150,7 @@ export default {
       return (
         this.$themeLocaleConfig.editLinkText ||
         this.$site.themeConfig.editLinkText ||
-        `Edit this page`
+        `在github 编辑此页`
       )
     },
 
@@ -173,7 +173,7 @@ export default {
           : repo
         return (
           base.replace(endingSlashRE, '') +
-           `/${docsBranch}` +
+           `/${docsBranch}/src` +
            (docsDir ? '/' + docsDir.replace(endingSlashRE, '') : '') +
            path +
            `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
@@ -186,7 +186,7 @@ export default {
 
       return (
         base.replace(endingSlashRE, '') +
-        `/edit/${docsBranch}` +
+        `/edit/${docsBranch}/src` +
         (docsDir ? '/' + docsDir.replace(endingSlashRE, '') : '') +
         path
       )
