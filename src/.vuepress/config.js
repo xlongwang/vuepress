@@ -7,7 +7,7 @@ module.exports = {
 	themeConfig: {
 		base: '/vuepress/',
 		lastUpdated: '更新于',
-		repo: 'vuejs/vuepress',
+		repo: 'xlongwang/vuepress',
 		repoLabel: '贡献代码！',
 		editLinks: true,
 		editLinkText: '在github上编辑此页',

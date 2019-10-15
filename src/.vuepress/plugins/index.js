@@ -1,7 +1,7 @@
 const dayjs = require('dayjs');
 
 module.exports = [
-  require('./my-frontmatter/index.js'),
+//   require('./my-frontmatter/index.js'),
   'vuepress-plugin-viewer',
   ['@vuepress/google-analytics', { ga: 'UA-150080904-1' }],
   '@vuepress/back-to-top',
