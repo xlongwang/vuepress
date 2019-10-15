@@ -4,7 +4,7 @@
 	"version": "0.11.0-beta",
 	"license": "MIT",
 	"scripts": {
-		"dev": "vuepress dev src",
+		"dev": "nodemon src/bin/sidebar.js & vuepress dev src",
 		"build": "vuepress build src",
 		"devs": "./node_modules/.bin/vuepress dev ."
 	},
