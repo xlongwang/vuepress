@@ -5,6 +5,7 @@ module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',         //发布目录
 	themeConfig: {
+		base: '/public/',
 		lastUpdated: '更新于',  
 		repo: 'xlongwang/vuepress',   //上报的地址
 		repoLabel: '贡献代码！',   
