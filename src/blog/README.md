@@ -1,6 +1,7 @@
 ---
 title: Blog列表
 blog: true
+sidebar: false
 ---
  
 <BlogPostList 

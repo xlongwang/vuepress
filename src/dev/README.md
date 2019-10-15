@@ -1,6 +1,7 @@
 ---
 title: "开发环境"
 date: "2019-08-23"
+sidebar: auto
 --- 
 
 ## Node.js

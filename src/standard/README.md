@@ -1,6 +1,7 @@
 ---
 title: "前端编码规范"
 date: "2019-09-30"
+sidebar: "auto"
 ---
 
 ## js 规范

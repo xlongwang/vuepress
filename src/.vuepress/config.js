@@ -1,77 +1,41 @@
 const moment = require('moment');
+const sidebar = require('./config/sidebar.js')
 
 module.exports = {
 	title: 'Frontend Blog',
 	dest: './public',
-	home: true,
 	themeConfig: {
 		base: '/vuepress/',
-		lastUpdated: 'Last Updated',
-		repo: 'xlongwang/vuepress',
+		lastUpdated: '更新于',
+		repo: 'vuejs/vuepress',
 		repoLabel: '贡献代码！',
 		editLinks: true,
-		// 自定义编辑链接的文本。默认是 "Edit this page"
-		editLinkText: '编辑此页',
+		editLinkText: '在github上编辑此页',
+		navbar: true,
 		nav: [
-			{ text: '首页', link: '/' }, 
+			{ text: '首页', link: '/' },
 			{ text: 'Blog', link: '/blog/' },
-			{ text: '组件文档', link: '/baseComponents/' },
+			{ text: '组件文档', 
+				items: [
+					{ text: '基础组件', link: '/baseComponents/组件文档/0.基础组件/0.按钮.html' },
+					{ text: '视图组件', link: '/baseComponents/组件文档/1.视图组件/0.文字链接.html' },
+					{ text: '工具类组件', link: '/baseComponents/组件文档/2.工具类组件/0.组件.html' },
+					{ text: '方法类函数', link: '/baseComponents/组件文档/3.方法类函数/0.组件.html' },
+				]
+			},
 			{ text: '常见问题', link: '/qa/' },
-			{ text: '历史更新', link: '/archive/' }
-		], 
+		],
 		logo: '/logo.png',
-		docsDir: 'src',
 		pageSize: 8,
 		startPage: 0,
-		sidebar: 'auto',
+		sidebarDepth: 0,
 		sidebar: {
-			'/standard/': [
-				''
-			  ],
-
-			'/qa/': [
-				''
-			],
-			'/baseComponents/': [
-				'',
-			],
-			'/dev/': [
-				''
-			],
-			'/handbook/': [
-				''
-			]
-			
-		  }
-		
+			"/baseComponents/": sidebar,
+		}
 	},
-	plugins: [
-		[
-			'@vuepress/google-analytics',
-			{
-			  'ga': '' // UA-00000000-0
-			}
-		],
-		[
-			'@vuepress/last-updated',
-			{
-			  transformer: (timestamp, lang) => {
-				const moment = require('moment')
-				moment.locale(lang)
-				return moment(timestamp).fromNow()
-			  }
-			}
-		  ],
-		['@vuepress/back-to-top'],
-		'vuepress-plugin-reading-time'
-	],
+	plugins: require('./plugins/'),
+
 	head: [
-		['link', { rel: 'apple-touch-icon', sizes: '180x180', href: '/apple-icon.png' }],
-		['link', { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' }],
-		['link', { rel: 'icon', sizes: '16x16', href: '/favicon-16x16.png' }],
-		['link', { rel: 'manifest', href: '/site.webmanifest' }],
-		['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', color: '#5bbad5' }],
-		['meta', { name: 'msapplication-TileColor', content: '#da532c' }],
-		['meta', { name: 'theme-color', content: '#ffffff' }]
+		['link', { rel: 'icon', sizes: '32x32', href: '/favicon-32x32.png' }]
 	]
 }
