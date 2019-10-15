@@ -117,15 +117,19 @@ export default {
           rows: [
               {
                 name: '基础组件',
-                href: '/baseComponents/'
+                href: '/baseComponents/组件文档/0.基础组件/0.按钮.html'
               },
                {
-                name: '按钮',
-                href: '/baseComponents/#按钮'
+                name: '视图组件',
+                href: '/baseComponents/组件文档/1.视图组件/0.文字链接.html'
               },
              {
-              name: '文字链接',
-              href: '/baseComponents/#文字链接/'
+              name: '工具类组件',
+              href: '/baseComponents/组件文档/2.工具类组件/0.组件.html'
+			},
+			{
+              name: '方法类函数',
+              href: '/baseComponents/组件文档/3.方法类函数/0.组件.html'
             },
           ]
         },
