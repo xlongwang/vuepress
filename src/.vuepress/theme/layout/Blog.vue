@@ -1,8 +1,8 @@
 <template>
   <div class="blog ">
      <div class="blog_content">
-        <div class="blog__header" v-if="publishDate"> 
-          <p class="publish-date"><time :datetime="$frontmatter.date">{{ publishDate }}</time></p>
+        <div class="blog__header"> 
+          <p class="publish-date"><time v-if="publishDate">{{ publishDate }}</time></p>
           <p v-if="$page.readingTime">预计所需时间: {{ $page.readingTime.text }}</p>
           <h1 class="blog__title">{{ $page.title }}</h1>
         </div>
@@ -79,15 +79,7 @@ export default {
     lastUpdated () {
       if (this.$page.lastUpdated) {
         const dateFormat = new Date(this.$page.lastUpdated)
-
-        const options = {
-            year: 'numeric',
-            month: 'long',
-            day: 'numeric'
-		} 
-		return this.$page.lastUpdated
-        
-        // return `${dateFormat.toLocaleDateString(this.$lang, options)}, ${dateFormat.toLocaleTimeString(this.$lang)}`
+      	return moment(dateFormat).format('YYYY-MM-D h:mm:ss A');
       }
     },
 
@@ -155,8 +147,8 @@ export default {
     },
 
     publishDate() {
-		if(this.$frontmatter.date){
-			const dateFormat = new Date(this.$frontmatter.date)
+		if(this.$page.frontmatter.date){
+			const dateFormat = new Date(this.$page.frontmatter.date)
 			return moment(dateFormat).format('YYYY-MM-D h:mm:ss A');
 		}else{
 			return false

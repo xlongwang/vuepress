@@ -3,7 +3,7 @@ const sidebar = require('./config/sidebar.js')
 
 module.exports = {
 	title: 'Frontend Blog',
-	dest: './public',         //发布目录
+	dest: './docs',         //发布目录
 	themeConfig: {
 		lastUpdated: '更新于',  
 		repo: 'xlongwang/vuepress',   //上报的地址
